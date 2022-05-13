@@ -63,13 +63,13 @@ class CEiDGApiClient
                         data_get($companyData, 'wlasciciel.regon'),
                     ),
                     new Address(
-                        data_get($companyData, 'adresKorespondencyjny.ulica'),
                         data_get($companyData, 'adresKorespondencyjny.budynek'),
                         data_get($companyData, 'adresKorespondencyjny.miasto'),
                         data_get($companyData, 'adresKorespondencyjny.wojewodztwo'),
                         data_get($companyData, 'adresKorespondencyjny.powiat'),
                         data_get($companyData, 'adresKorespondencyjny.gmina'),
-                        data_get($companyData, 'adresKorespondencyjny.kraj')
+                        data_get($companyData, 'adresKorespondencyjny.kraj'),
+                        data_get($companyData, 'adresKorespondencyjny.ulica')
                     )
                 );
             case 204:
