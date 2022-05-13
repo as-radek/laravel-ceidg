@@ -39,7 +39,7 @@ class CEiDGApiClient
 
         $response = $this
             ->httpClient
-            ->get('/firma', $query);
+            ->get('firma', $query);
 
         switch($response->getStatusCode()) {
             case 200:
