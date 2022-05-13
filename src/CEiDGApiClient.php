@@ -57,19 +57,19 @@ class CEiDGApiClient
                     $companyData['id'],
                     $companyData['nazwa'],
                     new Owner(
-                        $companyData['wlasciciel']['imie'],
-                        $companyData['wlasciciel']['nazwisko'],
-                        $companyData['wlasciciel']['nip'],
-                        $companyData['wlasciciel']['regon'],
+                        data_get($companyData, 'wlasciciel.imie'),
+                        data_get($companyData, 'wlasciciel.nazwisko'),
+                        data_get($companyData, 'wlasciciel.nip'),
+                        data_get($companyData, 'wlasciciel.regon'),
                     ),
                     new Address(
-                        $companyData['adresKorespondencyjny']['ulica'],
-                        $companyData['adresKorespondencyjny']['budynek'],
-                        $companyData['adresKorespondencyjny']['miasto'],
-                        $companyData['adresKorespondencyjny']['wojewodztwo'],
-                        $companyData['adresKorespondencyjny']['powiat'],
-                        $companyData['adresKorespondencyjny']['gmina'],
-                        $companyData['adresKorespondencyjny']['kraj']
+                        data_get($companyData, 'adresKorespondencyjny.ulica'),
+                        data_get($companyData, 'adresKorespondencyjny.budynek'),
+                        data_get($companyData, 'adresKorespondencyjny.miasto'),
+                        data_get($companyData, 'adresKorespondencyjny.wojewodztwo'),
+                        data_get($companyData, 'adresKorespondencyjny.powiat'),
+                        data_get($companyData, 'adresKorespondencyjny.gmina'),
+                        data_get($companyData, 'adresKorespondencyjny.kraj')
                     )
                 );
             case 204:
