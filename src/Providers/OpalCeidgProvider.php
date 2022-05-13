@@ -26,13 +26,13 @@ class OpalCeidgProvider extends ServiceProvider
 
         $this
             ->publishes([
-                __DIR__ . '/../resources/lang' => 'resources/lang/vendor/ceidg'
+                __DIR__ . '/../resources/lang' => resource_path('lang/vendor/ceidg')
             ],
                 'laravel-ceidg-translations'
         );
 
         $this
-            ->loadTranslationsFrom('ceidg', 'laravel-ceidg-translations');
+            ->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'ceidg');
     }
 
     public function register()
