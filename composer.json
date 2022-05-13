@@ -17,7 +17,6 @@
             "email": "rsysa@opal.lublin.pl"
         }
     ],
-    "minimum-stability": "stable",
     "extra": {
         "laravel": {
             "providers": [
