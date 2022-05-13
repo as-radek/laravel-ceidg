@@ -9,7 +9,7 @@ namespace Opal\OpalCeidg\Dto;
 class Address
 {
     /**
-     * @var string
+     * @var string|null
      */
     protected $street;
 
@@ -44,29 +44,29 @@ class Address
     protected $country;
 
     /**
-     * @param string $street
      * @param string $building
      * @param string $city
      * @param string $voivodeship
      * @param string $county
      * @param string $commune
      * @param string $country
+     * @param string|null $street
      */
-    public function __construct(string $street, string $building, string $city, string $voivodeship, string $county, string $commune, string $country)
+    public function __construct(string $building, string $city, string $voivodeship, string $county, string $commune, string $country, ?string $street = null)
     {
-        $this->street = $street;
         $this->building = $building;
         $this->city = $city;
         $this->voivodeship = $voivodeship;
         $this->county = $county;
         $this->commune = $commune;
         $this->country = $country;
+        $this->street = $street;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getStreet(): string
+    public function getStreet(): ?string
     {
         return $this->street;
     }
