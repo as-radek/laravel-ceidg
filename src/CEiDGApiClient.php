@@ -63,13 +63,13 @@ class CEiDGApiClient
                         $companyData['wlasciciel']['regon'],
                     ),
                     new Address(
-                        $companyData['adresDzialalnosci']['ulica'],
-                        $companyData['adresDzialalnosci']['budynek'],
-                        $companyData['adresDzialalnosci']['miasto'],
-                        $companyData['adresDzialalnosci']['wojewodztwo'],
-                        $companyData['adresDzialalnosci']['powiat'],
-                        $companyData['adresDzialalnosci']['gmina'],
-                        $companyData['adresDzialalnosci']['kraj']
+                        $companyData['adresKorespondencyjny']['ulica'],
+                        $companyData['adresKorespondencyjny']['budynek'],
+                        $companyData['adresKorespondencyjny']['miasto'],
+                        $companyData['adresKorespondencyjny']['wojewodztwo'],
+                        $companyData['adresKorespondencyjny']['powiat'],
+                        $companyData['adresKorespondencyjny']['gmina'],
+                        $companyData['adresKorespondencyjny']['kraj']
                     )
                 );
             case 204:
