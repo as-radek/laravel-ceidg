@@ -28,7 +28,7 @@ class CompanyFilter
      * @param string|null $regon
      * @param array $ids
      */
-    public function __construct(?string $nip, ?string $regon, array $ids = [])
+    public function __construct(?string $nip, ?string $regon = null, array $ids = [])
     {
         $this->nip = $nip;
         $this->regon = $regon;
