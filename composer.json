@@ -1,0 +1,28 @@
+{
+    "name": "o249/opal-ceidg",
+    "description": "CEiDG integration",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^7.4",
+        "illuminate/support": "^8.83"
+    },
+    "autoload": {
+        "psr-4": {
+            "Opal\\OpalCeidg\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Radek",
+            "email": "rsysa@opal.lublin.pl"
+        }
+    ],
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Opal\\OpalCeidg\\Providers\\OpalCeidgProvider"
+            ]
+        }
+    }
+}
