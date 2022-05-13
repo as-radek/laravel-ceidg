@@ -9,7 +9,7 @@ namespace Opal\OpalCeidg\Dto;
 class Company
 {
     /**
-     * @var int
+     * @var string
      */
     protected $id;
 
@@ -29,12 +29,12 @@ class Company
     protected $address;
 
     /**
-     * @param int $id
+     * @param string $id
      * @param string $name
      * @param Owner $owner
      * @param Address $address
      */
-    public function __construct(int $id, string $name, Owner $owner, Address $address)
+    public function __construct(string $id, string $name, Owner $owner, Address $address)
     {
         $this->id = $id;
         $this->name = $name;
@@ -43,9 +43,9 @@ class Company
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getId(): int
+    public function getId(): string
     {
         return $this->id;
     }
