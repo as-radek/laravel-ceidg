@@ -24,35 +24,35 @@ class Address
     protected $city;
 
     /**
-     * @var string
+     * @var string|null
      */
     protected $voivodeship;
 
     /**
-     * @var string
+     * @var string|null
      */
     protected $county;
 
     /**
-     * @var string
+     * @var string|null
      */
     protected $commune;
 
     /**
-     * @var string
+     * @var string|null
      */
     protected $country;
 
     /**
      * @param string $building
      * @param string $city
-     * @param string $voivodeship
-     * @param string $county
-     * @param string $commune
-     * @param string $country
+     * @param string|null $voivodeship
+     * @param string|null $county
+     * @param string|null $commune
+     * @param string|null $country
      * @param string|null $street
      */
-    public function __construct(string $building, string $city, string $voivodeship, string $county, string $commune, string $country, ?string $street = null)
+    public function __construct(string $building, string $city, ?string $voivodeship, ?string $county, ?string $commune, ?string $country, ?string $street = null)
     {
         $this->building = $building;
         $this->city = $city;
@@ -88,33 +88,33 @@ class Address
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getVoivodeship(): string
+    public function getVoivodeship(): ?string
     {
         return $this->voivodeship;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getCounty(): string
+    public function getCounty(): ?string
     {
         return $this->county;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getCommune(): string
+    public function getCommune(): ?string
     {
         return $this->commune;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getCountry(): string
+    public function getCountry(): ?string
     {
         return $this->country;
     }
