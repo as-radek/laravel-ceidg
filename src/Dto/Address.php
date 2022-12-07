@@ -44,6 +44,11 @@ class Address
     protected $country;
 
     /**
+     * @var string|null
+     */
+    protected $zip;
+
+    /**
      * @param string $building
      * @param string $city
      * @param string|null $voivodeship
@@ -51,8 +56,9 @@ class Address
      * @param string|null $commune
      * @param string|null $country
      * @param string|null $street
+     * @param string|null $zip
      */
-    public function __construct(string $building, string $city, ?string $voivodeship, ?string $county, ?string $commune, ?string $country, ?string $street = null)
+    public function __construct(string $building, string $city, ?string $voivodeship, ?string $county, ?string $commune, ?string $country, ?string $street = null, ?string $zip = null)
     {
         $this->building = $building;
         $this->city = $city;
@@ -61,6 +67,7 @@ class Address
         $this->commune = $commune;
         $this->country = $country;
         $this->street = $street;
+        $this->zip = $zip;
     }
 
     /**
@@ -117,5 +124,13 @@ class Address
     public function getCountry(): ?string
     {
         return $this->country;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getZip(): ?string
+    {
+        return $this->zip;
     }
 }
