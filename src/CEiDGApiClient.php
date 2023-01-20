@@ -31,7 +31,9 @@ class CEiDGApiClient
 
     public function company(CompanyFilter $filter)
     {
-        $query = [];
+        $query = [
+            'status' => 'AKTYWNY'
+        ];
 
         if($filter->getNip()) {
             $query['nip'] = $filter->getNip();
