@@ -56,7 +56,7 @@ class CEiDGApiClient
                     throw new CEiDGResponseParsingException(trans('ceidg::errors.response_parsing_error'));
                 }
 
-                $companyData = $decoded['firma'][0];
+                $companyData = $decoded['firmy'][0];
 
                 return new Company(
                     $companyData['id'],
