@@ -32,16 +32,19 @@ class CEiDGApiClient
     public function company(CompanyFilter $filter)
     {
         $query = [
-            'status' => ['AKTYWNY', 'WYLACZNIE_W_FORMIE_SPOLKI']
+            'status' => [
+                'AKTYWNY',
+                'WYLACZNIE_W_FORMIE_SPOLKI'
+            ]
         ];
 
         if($filter->getNip()) {
-            $query['nip'] = $filter->getNip();
+            $query['nip'][] = $filter->getNip();
         }
 
         $response = $this
             ->httpClient
-            ->get('firma', ['query' => $query]);
+            ->get('firmy', ['query' => $query]);
 
         switch($response->getStatusCode()) {
             case 200:
