@@ -68,14 +68,14 @@ class CEiDGApiClient
                         data_get($companyData, 'wlasciciel.regon'),
                     ),
                     new Address(
+                        data_get($companyData, 'adresDzialalnosci.budynek', data_get($companyData, 'adresKorespondencyjny.budynek')),
                         data_get($companyData, 'adresDzialalnosci.miasto', data_get($companyData, 'adresKorespondencyjny.miasto')),
                         data_get($companyData, 'adresDzialalnosci.wojewodztwo', data_get($companyData, 'adresKorespondencyjny.wojewodztwo')),
                         data_get($companyData, 'adresDzialalnosci.powiat', data_get($companyData, 'adresKorespondencyjny.powiat')),
                         data_get($companyData, 'adresDzialalnosci.gmina', data_get($companyData, 'adresKorespondencyjny.gmina')),
                         data_get($companyData, 'adresDzialalnosci.kraj', data_get($companyData, 'adresKorespondencyjny.kraj')),
                         data_get($companyData, 'adresDzialalnosci.ulica', data_get($companyData, 'adresKorespondencyjny.ulica')),
-                        data_get($companyData, 'adresDzialalnosci.kod', data_get($companyData, 'adresKorespondencyjny.kod')),
-                        data_get($companyData, 'adresDzialalnosci.budynek', data_get($companyData, 'adresKorespondencyjny.budynek')),
+                        data_get($companyData, 'adresDzialalnosci.kod', data_get($companyData, 'adresKorespondencyjny.kod'))
                     )
                 );
             case 204:
